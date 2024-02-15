@@ -32,4 +32,13 @@ public class RestaurantController {
         RestaurantDto restaurantAdded  = restaurantService.addRestaurantInDB(restaurantDto);
         return new ResponseEntity<>(restaurantAdded, HttpStatus.CREATED);
     }
+
+    @GetMapping("/fetchById/{id}")
+    public ResponseEntity<RestaurantDto> findRestaurantById(@PathVariable Long id){
+        RestaurantDto restaurantDto = restaurantService.fetchRestaurantById(id);
+        if(restaurantDto == null){
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(restaurantDto, HttpStatus.OK);
+    }
 }
