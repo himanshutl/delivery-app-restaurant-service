@@ -13,5 +13,4 @@ public class RestaurantDto {
     private String address;
     private String city;
     private String restaurantDescription;
-
 }

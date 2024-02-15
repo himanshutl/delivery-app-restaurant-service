@@ -16,10 +16,7 @@ import java.util.stream.Collectors;
 @Service
 public class RestaurantService {
 
-    @Autowired
     private RestaurantRepository restaurantRepository;
-
-    @Autowired
     private ModelMapper modelMapper;
 
     public RestaurantService(RestaurantRepository restaurantRepository, ModelMapper modelMapper) {
