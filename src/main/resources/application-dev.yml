@@ -1,0 +1,11 @@
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: eureka-0
+  client:
+    service-url:
+      defaultZone: http://eureka-0.eureka-service.default.svc.cluster.local:8761/eureka
+
+
+
+#defaultZone: http://{pod_name}.{kubernetes_service}.{namespace}.svc.cluster.local:8761/eureka
