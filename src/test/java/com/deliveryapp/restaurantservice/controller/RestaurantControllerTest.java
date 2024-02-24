@@ -19,10 +19,10 @@ import java.util.List;
 public class RestaurantControllerTest {
 
     @InjectMocks
-    RestaurantController restaurantController;
+    private RestaurantController restaurantController;
 
     @Mock
-    RestaurantService restaurantService;
+    private RestaurantService restaurantService;
 
     @BeforeEach
     public void setUp() {
@@ -67,6 +67,7 @@ public class RestaurantControllerTest {
         Assertions.assertEquals(mockedRestaurant, response.getBody());
         Mockito.verify(restaurantService, Mockito.times(1)).addRestaurantInDB(mockedRestaurant);
     }
+
 
     @Test
     public void testFindRestaurantByID() {
